@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Statistik Mahasiswa</title>
+    <title>SB Admin 2 - Hapus Mahasiswa</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -161,13 +161,13 @@
                     <span>Edit Mahasiswa</span></a>
             </li>
             <!-- Nav Item - Hapus Mahasiswa -->
-            <li class="nav-item">
+            <li class="nav-item active">
                 <a class="nav-link" href="hapus-mahasiswa.html">
                     <i class="fas fa-fw fa-user-times"></i>
                     <span>Hapus Mahasiswa</span></a>
             </li>
             <!-- Nav Item - Statistik Mahasiswa -->
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link" href="statistik-mahasiswa.html">
                     <i class="fas fa-fw fa-chart-bar"></i>
                     <span>Statistik Mahasiswa</span></a>
@@ -405,64 +405,37 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-2 text-gray-800">Statistik Mahasiswa</h1>
-                    <p class="mb-4">Statistik dan grafik terkait akun mahasiswa. Chart.js digunakan untuk visualisasi.</p>
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        <h1 class="h3 mb-0 text-gray-800">Hapus Akun Mahasiswa</h1>
+                    </div>
 
-                    <!-- Content Row -->
                     <div class="row">
 
-                        <div class="col-xl-8 col-lg-7">
-
-                            <!-- Area Chart -->
-                            <div class="card shadow mb-4">
+                        <div class="col-xl-12 col-md-12 mb-4">
+                            <div class="card shadow">
                                 <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">Pendaftaran Mahasiswa Bulanan</h6>
+                                    <h6 class="m-0 font-weight-bold text-primary">Form Hapus Akun Mahasiswa</h6>
                                 </div>
                                 <div class="card-body">
-                                    <div class="chart-area">
-                                        <canvas id="myAreaChart"></canvas>
-                                    </div>
+                                    <p>Masukkan NIM mahasiswa yang ingin dihapus. Pastikan data benar karena aksi ini tidak bisa dibatalkan.</p>
+                                    <form class="user">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control form-control-user"
+                                                id="nim" aria-describedby="nimHelp"
+                                                placeholder="Masukkan NIM">
+                                        </div>
+                                        <a href="mahasiswa.html" class="btn btn-danger btn-user btn-block">
+                                            Hapus Mahasiswa
+                                        </a>
+                                    </form>
                                     <hr>
-                                    Styling for the area chart can be found in the
-                                    <code>/js/demo/chart-area-demo.js</code> file.
-                                </div>
-                            </div>
-
-                            <!-- Bar Chart -->
-                            <div class="card shadow mb-4">
-                                <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">Distribusi Jurusan</h6>
-                                </div>
-                                <div class="card-body">
-                                    <div class="chart-bar">
-                                        <canvas id="myBarChart"></canvas>
+                                    <div class="text-center">
+                                        <a class="small" href="mahasiswa.html">Kembali ke Daftar Mahasiswa</a>
                                     </div>
-                                    <hr>
-                                    Styling for the bar chart can be found in the
-                                    <code>/js/demo/chart-bar-demo.js</code> file.
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <!-- Donut Chart -->
-                        <div class="col-xl-4 col-lg-5">
-                            <div class="card shadow mb-4">
-                                <!-- Card Header - Dropdown -->
-                                <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">Status Aktif Mahasiswa</h6>
-                                </div>
-                                <!-- Card Body -->
-                                <div class="card-body">
-                                    <div class="chart-pie pt-4">
-                                        <canvas id="myPieChart"></canvas>
-                                    </div>
-                                    <hr>
-                                    Styling for the donut chart can be found in the
-                                    <code>/js/demo/chart-pie-demo.js</code> file.
                                 </div>
                             </div>
                         </div>
+
                     </div>
 
                 </div>
@@ -521,14 +494,6 @@
 
     <!-- Custom scripts for all pages-->
     <script src="js/sb-admin-2.min.js"></script>
-
-    <!-- Page level plugins -->
-    <script src="vendor/chart.js/Chart.min.js"></script>
-
-    <!-- Page level custom scripts -->
-    <script src="js/demo/chart-area-demo.js"></script>
-    <script src="js/demo/chart-pie-demo.js"></script>
-    <script src="js/demo/chart-bar-demo.js"></script>
 
 </body>
 
